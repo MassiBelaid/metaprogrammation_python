@@ -1,0 +1,1 @@
+http://sametmax.com/la-difference-entre-__new__-et-__init__-en-python/
