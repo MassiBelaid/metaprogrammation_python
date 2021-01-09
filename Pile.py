@@ -1,4 +1,18 @@
-class Pile:
+class PileSingleton(type):
+	"""La méta classe"""
+	"""liste qui va contenire toute les instances de pile"""
+	_instances = list()
+	def __call__ (cls, *args, **kwargs):
+		"""Redéfinition de __call__ qui est appellée a chaque appel a la classe"""
+		instanceCree = super(PileSingleton, cls).__call__(*args, **kwargs)
+		"""ajout de la nouvelle instance a la liste"""
+		cls._instances.append(instanceCree)
+		return instanceCree
+
+
+
+
+class Pile (metaclass = PileSingleton):
 	"""Implémentation de la classe Pile vue en TP"""
 
 	def __new__(cls, taille=None):

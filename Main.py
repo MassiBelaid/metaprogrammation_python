@@ -1,4 +1,5 @@
 from Pile import Pile
+from Pile import PileSingleton
 from RefactorPile import RefactorPile
 import inspect
 
@@ -57,5 +58,8 @@ refP.push('10')
 refP.grow()
 refP.push('10')
 
+
+print('------------------------')
+print(PileSingleton._instances)
 
 input("====")
